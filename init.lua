@@ -108,7 +108,7 @@ require("lazy").setup({
             'neovim/nvim-lspconfig',
             dependencies = { 'saghen/blink.cmp', 'williamboman/mason-lspconfig.nvim' },
             config = function()
-                local servers = { 'lua_ls' }
+                local servers = { 'lua_ls', 'pylsp' }
 
                 for _, server in ipairs(servers) do
                     local capabilities = require('blink.cmp').get_lsp_capabilities()
@@ -127,7 +127,7 @@ require("lazy").setup({
             "williamboman/mason-lspconfig.nvim",
             opts = {
                 -- Add language servers here and above in servers table
-                ensure_installed = { "lua_ls" },
+                ensure_installed = { "lua_ls", "pylsp" },
                 automatic_installation = true,
             }
         },
